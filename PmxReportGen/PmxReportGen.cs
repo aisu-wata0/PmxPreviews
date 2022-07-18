@@ -75,7 +75,7 @@ internal class Program
 			if (dirPath == null)
 			{
 				Console.WriteLine($"# FAIL: directory doesn't exist: \"{dirPath}\", this shouldn't happen, since its the parent of the pmxs path");
-				return false;
+				return;
 			}
 			var previewDirpath = Path.Combine(dirPath, previewDirname);
 			var previewPath = Path.Combine(previewDirpath, $"{Path.GetFileName(modelFile)}" + "_0, 0.png");
