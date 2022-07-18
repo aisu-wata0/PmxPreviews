@@ -1,4 +1,4 @@
 
 dotnet build PmxEditorPreviewGen
 dotnet build PmxPreviewRunner
-# dotnet build PmxReportGen
+dotnet build PmxReportGen

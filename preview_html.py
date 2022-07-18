@@ -3,11 +3,11 @@ from pathlib import Path
 import base64
 import logging
 import re
-import cv2
 from PIL import Image
-import numpy as np
 import json
 import time
+import cv2
+import numpy as np
 
 html_sortable_table_class = "sortable_table"
 
@@ -147,7 +147,7 @@ def main():
     start_time = time.time()
 
     if len(sys.argv) != 2:
-        print("Usage: PmxReportGen path")
+        print('Usage: python preview_html.py "path_to_folder_tree_with_previews"')
         return
 
     dirpath = sys.argv[1]

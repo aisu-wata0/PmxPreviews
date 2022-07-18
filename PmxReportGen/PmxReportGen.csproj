@@ -1,15 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+
+  <ItemGroup>
+    <Compile Include="PmxReportGen.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PmxEditorPreviewGen</RootNamespace>
     <AssemblyName>PmxEditorPreviewGen</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>net6.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -32,40 +38,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="PmxEditorPreviewGen.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
-  <!-- The following ItemGroup should be on if you just found these packages on the internet, downloaded them and threw them on the project folder like me; -->
-  <!-- If you are better you should have these installed/included properly; -->
-  <!-- if so, comment this ItemGroup out and uncomment the next ItemGroup  -->
-  <ItemGroup>
-    <Reference Include="PEPlugin, Version=0.0.8.3, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\PEPlugin\PEPlugin.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="SlimDX">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\slimdx\slimdx.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-
-  <!--
-  <ItemGroup>
-    <Reference Include="PEPlugin">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="SlimDX">
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  -->
-
+  
   <ItemGroup>
     <Reference Include="System">
       <Private>False</Private>
@@ -89,9 +62,6 @@
     <Reference Include="System.Data">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Net.Http">
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.Xml">
       <Private>False</Private>
     </Reference>
@@ -99,5 +69,4 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  
 </Project>
