@@ -1,0 +1,3 @@
+[submodule "translation_cache_generator"]
+	path = translation_cache_generator
+	url = git@github.com:bfs15/translation_cache_generator.git
