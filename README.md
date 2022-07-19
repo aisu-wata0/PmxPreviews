@@ -11,8 +11,9 @@ Download from the releases:
 
 * `PmxPreviewRunner.exe` and put it in the clean `PmxEditor` you will use.
 * `PmxEditorPreviewGen.dll` which is the plugin file you should install (just put the file in `PmxEditor/_plugin/User/`)
+* Copy the `config.ini` in this repository to the same folder, and read it to see if its how you want it.
 
-Drag the folder you'd like to generate the previews into the executable `PmxPreviewRunner.exe` you just put in the `PmxEditor` folder. Copy the `config.ini` in this repository to the same folder, and read it to see if its how you want it. If you know what a command line is, you can alternatively run `PmxPreviewRunner.exe "folder_to_create_previews"` (in the `PmxEditor` folder of course).
+Drag the folder you'd like to generate the previews into the executable `PmxPreviewRunner.exe` you just put in the `PmxEditor` folder. If you know what a command line is, you can alternatively run `PmxPreviewRunner.exe "folder_to_create_previews"` (in the `PmxEditor` folder of course).
 
 ## New preview .html version
 
