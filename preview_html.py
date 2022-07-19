@@ -415,6 +415,9 @@ def main():
             for ir in img_resolution_output:
                 try:
                     imageData[ir] = prep_imgs(previewPaths, ir)
+                except FileNotFoundError as e:
+                    ps = [re.sub("\\\\", "/", str(p)) for p in previewPaths]
+                    logging.warning(f"FileNotFoundError images: {ps}")
                 except Exception as e:
                     ps = [re.sub("\\\\", "/", str(p)) for p in previewPaths]
                     logging.exception(f"Error on images: {ps}")
@@ -423,7 +426,7 @@ def main():
 
             PreviewHtml = {}
             for ir in img_resolution_output:
-                PreviewHtml[ir] = f"<a  href=\"{dirlink}\"><img class='preview_image' src='data:image/png;base64, {imageData[ir]}'/></a>"
+                PreviewHtml[ir] = f"<a  href=\"{dirlink}\"><img class='preview_image' src='data:image/png;base64, {imageData.get(ir, '')}'/></a>"
 
             def get_folder_size(folder_path, folder_size_cache={}):
                 if folder_path.name in exclude_folders_in_size:
